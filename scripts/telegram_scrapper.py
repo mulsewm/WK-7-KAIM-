@@ -3,18 +3,20 @@ import json
 import logging
 from telethon import TelegramClient
 from telethon.tl.types import MessageMediaPhoto
+from dotenv import load_dotenv
 
-# Telegram API credentials (Replace with your actual credentials)
-API_ID = '21687205'
-API_HASH = 'c424770fb2aba7ce0a21222309c120e5'
+
+load_dotenv()
+API_ID = os.getenv('API_ID')
+API_HASH = os.getenv('API_HASH')
 
 # Define target Telegram channels
 CHANNELS = [
     'DoctorsET',
-    # 'Chemed Telegram Channel',
-    # 'Lobelia4cosmetics',
-    # 'Yetenaweg',
-    # 'EAHCI'
+    'Chemed Telegram Channel',
+    'Lobelia4cosmetics',
+    'Yetenaweg',
+    'EAHCI'
 ]
 
 # Setup logging

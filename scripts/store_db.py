@@ -3,18 +3,21 @@ import pandas as pd
 import psycopg2
 import logging
 from sqlalchemy import create_engine
-
+from dotenv import load_dotenv
 # Setup logging
 logging.basicConfig(filename='db_ingestion.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger()
 logger.info("Starting Database Ingestion")
 
+# Load environment variables
+load_dotenv()
+
 # Database Configuration
-DB_NAME = "telegram_data"
-DB_USER = "postgres"
-DB_PASSWORD = "postgres"
-DB_HOST = "localhost"
-DB_PORT = "5432"
+DB_NAME = os.getenv("DB_NAME")
+DB_USER = os.getenv("DB_USER")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
+DB_HOST = os.getenv("DB_HOST")
+DB_PORT = os.getenv("DB_PORT")
 TABLE_NAME = "telegram_data"
 
 # Load cleaned data
