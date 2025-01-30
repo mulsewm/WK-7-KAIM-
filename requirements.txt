@@ -1,0 +1,9 @@
+telethon
+requests
+pandas
+beautifulsoup4
+scrapy
+selenium
+logging
+opencv-python
+torch torchvision
