@@ -1,9 +1,4 @@
-
-  create view "telegram_data"."public"."transform_telegram__dbt_tmp"
-    
-    
-  as (
-    WITH cleaned_data AS (
+WITH cleaned_data AS (
     SELECT 
         message_id,
         channel,
@@ -15,5 +10,4 @@
     WHERE text IS NOT NULL
 )
 
-SELECT * FROM cleaned_data;
-  );
+SELECT * FROM cleaned_data
