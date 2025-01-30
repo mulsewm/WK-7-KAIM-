@@ -6,4 +6,7 @@ scrapy
 selenium
 logging
 opencv-python
-torch torchvision
+torch
+torchvision
+psycopg2
+sqlalchemy

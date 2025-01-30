@@ -1,0 +1,16 @@
+2025-01-30 11:51:21,586 - INFO - Starting Database Ingestion
+2025-01-30 11:51:21,607 - ERROR - Error creating table: name 'engine' is not defined
+2025-01-30 11:51:21,607 - ERROR - Error inserting data: name 'engine' is not defined
+2025-01-30 11:53:48,324 - INFO - Starting Database Ingestion
+2025-01-30 11:53:48,346 - ERROR - Error creating table: name 'engine' is not defined
+2025-01-30 11:53:48,346 - ERROR - Error inserting data: name 'engine' is not defined
+2025-01-30 11:56:54,864 - INFO - Starting Database Ingestion
+2025-01-30 11:56:54,999 - ERROR - Error creating table: (psycopg2.OperationalError) FATAL:  database "telegram_db" does not exist
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-01-30 11:56:55,009 - ERROR - Error inserting data: (psycopg2.OperationalError) FATAL:  database "telegram_db" does not exist
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-01-30 11:59:01,321 - INFO - Starting Database Ingestion
+2025-01-30 11:59:01,519 - ERROR - Error creating table: Not an executable object: '\n                CREATE TABLE IF NOT EXISTS telegram_data (\n                    message_id BIGINT PRIMARY KEY,\n                    channel TEXT,\n                    text TEXT,\n                    date TIMESTAMP,\n                    media BOOLEAN,\n                    image_path TEXT\n                );\n            '
+2025-01-30 11:59:01,575 - INFO - Data inserted into PostgreSQL successfully.
