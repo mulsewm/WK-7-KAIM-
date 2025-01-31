@@ -9,3 +9,10 @@ class TelegramMessageSchema(BaseModel):
     message_date: datetime
     media: bool
     image_path: Optional[str] = None
+    
+class DetectionResultSchema(BaseModel):
+    image_name: str
+    object_class: str
+    confidence: float
+    bounding_box: str
+    detected_at: datetime

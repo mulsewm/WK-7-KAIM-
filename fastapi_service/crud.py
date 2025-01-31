@@ -1,8 +1,19 @@
-from sqlalchemy.orm import Session
-from models import TransformedTelegramData
+from pydantic import BaseModel
+from datetime import datetime
+from typing import Optional
 
-def get_all_messages(db: Session, limit: int = 10):
-    return db.query(TransformedTelegramData).limit(limit).all()
 
-def get_message_by_id(db: Session, message_id: int):
-    return db.query(TransformedTelegramData).filter(TransformedTelegramData.message_id == message_id).first()
+# Schema for Creating a New Message
+class TelegramMessageSchema(BaseModel):
+    channel: str
+    message_text: str
+    message_date: datetime
+    media: bool
+    image_path: Optional[str] = None
+
+
+# Schema for Updating an Existing Message
+class UpdateTelegramMessageSchema(BaseModel):
+    message_text: Optional[str] = None
+    media: Optional[bool] = None
+    image_path: Optional[str] = None

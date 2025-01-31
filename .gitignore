@@ -4,3 +4,5 @@ logs/*
 models/*
 .venv/
 .env
+fastapi_service/yolo_output
+fastapi_service/yolo_input
